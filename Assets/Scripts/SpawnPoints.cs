@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnPoints : MonoBehaviour
 {
     public GameObject prefab;
+    public GameObject Fondo;
+
     public float Y;
     public GameManager Instance; // A static reference to the GameManager instance
     private Camera cam;
