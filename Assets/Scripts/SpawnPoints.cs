@@ -6,22 +6,48 @@ public class SpawnPoints : MonoBehaviour
 {
     public GameObject prefab;
     public float Y;
-
+    public GameManager Instance; // A static reference to the GameManager instance
     private Camera cam;
     private List<Vector2> points = new List<Vector2>();
+
+    //my variables
+    private int velocity = 2;
+    private int step = 0;
+    public void Start()
+    {
+    }
 
     void FixedUpdate()
     {
         if (Input.GetMouseButton(0))
         {
+
+            if(step < velocity)
+            {
+                step++;
+                return;
+            }
+            step = 0;
+            Debug.Log("puslsando mouse.............");
             cam = Camera.main;
             Vector2 mousePos = new Vector2();
             mousePos.x = Input.mousePosition.x;
-            mousePos.y = cam.pixelHeight - Input.mousePosition.y;
-            Vector3 point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 10));
+            mousePos.y = Input.mousePosition.y;
+            Instance.setStain(mousePos);
+            Vector3 point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 100));
+            Instantiate(
+                prefab,
+                point,
+                Quaternion.identity
+            );
+
             points.Add(new Vector2(point.x, point.y * -1));
         }
-        if (Input.GetMouseButtonUp(0))
+        else
+        {
+            step = 0;
+        }
+        /*if (Input.GetMouseButtonUp(0))
         {
             float totalDistance = 0;
             for (int i = 0; i < points.Count - 1; i++)
@@ -51,6 +77,6 @@ public class SpawnPoints : MonoBehaviour
             }
             // Resetting List
             points = new List<Vector2>();
-        }
+        }*/
     }
 }
