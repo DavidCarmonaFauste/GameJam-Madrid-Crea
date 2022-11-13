@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Vector2 stain;
+    private static GameManager _instance;
+    public Vector2 Mancha { get; set; }
+    public string[] GraffitiBinario { get; set; }
+    public int NumOuts { get; set; }
 
-    public Vector2 getStain()
+    public static GameManager Instance
     {
-        return stain;
+        get
+        {
+            if (_instance is null)
+                Debug.LogError("Game Manager is Null");
+            return _instance;
+        }
     }
-    public void setStain(Vector2 s)
+
+    private void Awake()
     {
-        stain = s;
+        _instance = this;  
     }
     // Start is called before the first frame update
     void Start()

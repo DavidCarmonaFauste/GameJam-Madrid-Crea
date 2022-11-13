@@ -150,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cfca88e9169754598c5834a6c74d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fondo:
-  - {fileID: 21300000, guid: ada9fa03bb1b63c48b4b1a06af85d795, type: 3}
+  Fondo: {fileID: 21300000, guid: ada9fa03bb1b63c48b4b1a06af85d795, type: 3}
 --- !u!4 &100001278
 Transform:
   m_ObjectHideFlags: 0
@@ -177,7 +176,7 @@ GameObject:
   - component: {fileID: 522774921}
   - component: {fileID: 522774920}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Game_Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999269ca530b10d4aa75367ad4cc67d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stain: {x: 0, y: 0}
 --- !u!4 &522774921
 Transform:
   m_ObjectHideFlags: 0
@@ -323,8 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f472319c7f4bc54a8c8a3c9342e8e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite:
-  - {fileID: 21300000, guid: a4e1e4803876fd04abce6b7cbc5d0143, type: 3}
+  GraffitiBinario: GrafitiMuelle
+  mySprite: {fileID: 21300000, guid: a4e1e4803876fd04abce6b7cbc5d0143, type: 3}
 --- !u!4 &1502314936
 Transform:
   m_ObjectHideFlags: 0
@@ -354,4 +352,3 @@ MonoBehaviour:
   prefab: {fileID: 476490190284702937, guid: 54292936bf787b548bce9621a1ecadd8, type: 3}
   Fondo: {fileID: 0}
   Y: 50
-  Instance: {fileID: 522774920}
