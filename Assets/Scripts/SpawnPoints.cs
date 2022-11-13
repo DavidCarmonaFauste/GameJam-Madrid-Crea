@@ -8,13 +8,14 @@ public class SpawnPoints : MonoBehaviour
     public GameObject Fondo;
 
     public float Y;
-    public GameManager Instance; // A static reference to the GameManager instance
     private Camera cam;
     private List<Vector2> points = new List<Vector2>();
 
     //my variables
     private int velocity = 2;
     private int step = 0;
+
+    
     public void Start()
     {
     }
@@ -35,50 +36,35 @@ public class SpawnPoints : MonoBehaviour
             Vector2 mousePos = new Vector2();
             mousePos.x = Input.mousePosition.x;
             mousePos.y = Input.mousePosition.y;
-            Instance.setStain(mousePos);
+            GameManager.Instance.Mancha = mousePos;
             Vector3 point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 100));
             Instantiate(
                 prefab,
                 point,
                 Quaternion.identity
             );
-
-            points.Add(new Vector2(point.x, point.y * -1));
+            CalculateInOutPoint(mousePos);
         }
         else
         {
             step = 0;
         }
-        /*if (Input.GetMouseButtonUp(0))
-        {
-            float totalDistance = 0;
-            for (int i = 0; i < points.Count - 1; i++)
-            {
-                totalDistance += Vector2.Distance(points[i], points[i + 1]);
-            }
-            float averageDistance = totalDistance / (points.Count - 1);
-
-            // Spawning first Point
-            Vector2 lastPoint = points[0];
-            Instantiate(
-                prefab,
-                new Vector3(lastPoint.x, lastPoint.y,Y),
-                Quaternion.identity
-            );
-            // Spawning other Points
-            for (int i = 0; i < points.Count - 1; i++)
-            {
-                Vector2 spawnPos = lastPoint + ((points[i + 1] - lastPoint).normalized * averageDistance);
-
-                lastPoint = spawnPos; //Save the new point because you want create the next one from this one
-                Instantiate(
-                    prefab,
-                    new Vector3(spawnPos.x, spawnPos.y, Y),
-                    Quaternion.identity
-                );
-            }
-            // Resetting List
-            points = new List<Vector2>();
-        }*/
     }
-}
+    private void CalculateInOutPoint(Vector2 mousePos)
+    {
+        float xNorm = mousePos.x / Screen.width;
+        float yNorm = mousePos.y / Screen.height;
+
+        int yBin = (int) (yNorm * GameManager.Instance.GraffitiBinario.Length);
+        int xBin = (int)(xNorm * GameManager.Instance.GraffitiBinario[yBin].Length);
+
+        char isIn = GameManager.Instance.GraffitiBinario[134 - yBin][xBin];
+
+        Debug.Log("x: " + xBin);
+        Debug.Log("y: " + (134 - yBin));
+
+        //GameManager.Instance.NumOuts += (int)isIn;
+        int i = 0;
+        i++;
+    }
+ }
