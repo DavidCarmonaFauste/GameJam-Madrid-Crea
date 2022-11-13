@@ -60,10 +60,10 @@ public class SpawnPoints : MonoBehaviour
 
         char isIn = GameManager.Instance.GraffitiBinario[134 - yBin][xBin];
 
-        Debug.Log("x: " + xBin);
-        Debug.Log("y: " + (134 - yBin));
+        int isInNumber = isIn - '0';
+        GameManager.Instance.NumOuts += isInNumber;
+        Debug.Log(GameManager.Instance.NumOuts);
 
-        //GameManager.Instance.NumOuts += (int)isIn;
         int i = 0;
         i++;
     }
