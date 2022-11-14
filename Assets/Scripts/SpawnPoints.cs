@@ -12,25 +12,25 @@ public class SpawnPoints : MonoBehaviour
     private List<Vector2> points = new List<Vector2>();
 
     //my variables
-    private int velocity = 2;
-    private int step = 0;
+    public float velocity = 0.5f;
+    private float step = 0.0f;
 
     
     public void Start()
     {
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetMouseButton(0))
         {
 
             if(step < velocity)
             {
-                step++;
+                step += Time.deltaTime;
                 return;
             }
-            step = 0;
+            step = 0.0f;
             Debug.Log("puslsando mouse.............");
             cam = Camera.main;
             Vector2 mousePos = new Vector2();
@@ -61,6 +61,10 @@ public class SpawnPoints : MonoBehaviour
         char isIn = GameManager.Instance.GraffitiBinario[134 - yBin][xBin];
 
         int isInNumber = isIn - '0';
+        if(isInNumber == 0)
+        {
+            GameManager.Instance.NumIns++;
+        }
         GameManager.Instance.NumOuts += isInNumber;
         Debug.Log(GameManager.Instance.NumOuts);
 
