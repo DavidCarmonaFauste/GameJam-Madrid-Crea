@@ -8,9 +8,20 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     private bool facingRight = true;
 
+    Animator anim;
+
+    Vector3 pos, velocity;
+
+    private void Awake()
+    {
+
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = gameObject.GetComponent<Animator>();
+        velocity = (transform.position - pos) / Time.deltaTime;
     }
     void Update()
     {
@@ -25,13 +36,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("w"))
         {
             pos.y += speed * Time.deltaTime;
+            anim.SetBool("Walk", true);
         }
         if (Input.GetKey("s"))
         {
             pos.y -= speed * Time.deltaTime;
+            anim.SetBool("Walk", true);
         }
         if (Input.GetKey("d"))
         {
+            anim.SetBool("Walk", true);
             pos.x += speed * Time.deltaTime;
             if (!facingRight)
             {
@@ -41,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey("a"))
         {
+            anim.SetBool("Walk", true);
             pos.x -= speed * Time.deltaTime;
             if (facingRight)
             {
@@ -49,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
             }
                 
         }
+        if(Input.GetKeyUp("a") || Input.GetKeyUp("s") || Input.GetKeyUp("d") || Input.GetKeyUp("w"))
+            anim.SetBool("Walk", false);
+
 
         transform.position = pos;
 

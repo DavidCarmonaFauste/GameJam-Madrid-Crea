@@ -23,6 +23,7 @@ public class InteractWithGraffiti : MonoBehaviour
         {
             canInteract = false;
             SceneManager.LoadScene(sceneToGoTo, LoadSceneMode.Single);
+            spacebarObj.SetActive(false);
         }
     }
 
