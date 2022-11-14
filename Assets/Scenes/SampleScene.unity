@@ -2226,6 +2226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996754899135757231, guid: af0a417448de7c043bbd06853de877f8,
         type: 3}
+      propertyPath: sceneToGoTo
+      value: GraffitiBleck
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996754899135757231, guid: af0a417448de7c043bbd06853de877f8,
+        type: 3}
       propertyPath: spacebarObj
       value: 
       objectReference: {fileID: 1845174716}

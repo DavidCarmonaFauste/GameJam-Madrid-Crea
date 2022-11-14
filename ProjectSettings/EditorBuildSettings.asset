@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alley1.unity
     guid: ba5854e58431ba9438ad8869f4d37118
+  - enabled: 1
+    path: Assets/Scenes/GraffitiBleck.unity
+    guid: a8837e574e32ce14583e9a05565eacb1
+  - enabled: 1
+    path: Assets/Scenes/GraffitiGlub.unity
+    guid: f70c74f257228754a9fbc3ffdca9b0c6
+  - enabled: 1
+    path: Assets/Scenes/GraffitiTifon.unity
+    guid: fbb91b3c75d30b24cb54461b2e7d1f87
   m_configObjects: {}

@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7148dfe2647f046a3c9fa2b094d869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 476490190284702937, guid: 54292936bf787b548bce9621a1ecadd8, type: 3}
+  prefab: {fileID: 7109906720300334325, guid: a95d0ffec3a80944797800cb2230e299, type: 3}
   Fondo: {fileID: 0}
   Y: 50
-  velocity: 0.05
+  velocity: 0.02
