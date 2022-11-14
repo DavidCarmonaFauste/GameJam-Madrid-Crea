@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Vector2 Mancha { get; set; }
     public string[] GraffitiBinario { get; set; }
     public int NumOuts { get; set; }
+    public int NumIns { get; set; }
 
     public static GameManager Instance
     {
