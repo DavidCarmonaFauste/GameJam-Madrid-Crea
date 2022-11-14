@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GraffitiTifon.unity
     guid: fbb91b3c75d30b24cb54461b2e7d1f87
+  - enabled: 1
+    path: Assets/Scenes/Calle2.unity
+    guid: 43972feac83e381468e5fdfb0b57db58
   m_configObjects: {}

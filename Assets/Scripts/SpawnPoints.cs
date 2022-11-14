@@ -31,7 +31,7 @@ public class SpawnPoints : MonoBehaviour
                 return;
             }
             step = 0.0f;
-            Debug.Log("puslsando mouse.............");
+           // Debug.Log("puslsando mouse.............");
             cam = Camera.main;
             Vector2 mousePos = new Vector2();
             mousePos.x = Input.mousePosition.x;
@@ -66,7 +66,7 @@ public class SpawnPoints : MonoBehaviour
             GameManager.Instance.NumIns++;
         }
         GameManager.Instance.NumOuts += isInNumber;
-        Debug.Log(GameManager.Instance.NumOuts);
+       Debug.Log(GameManager.Instance.NumOuts);
 
         int i = 0;
         i++;
