@@ -28,8 +28,8 @@ public class GraffitiChecker : MonoBehaviour
 
     public void NextScene()
     {
-        StartCoroutine(GoToNextScene());
-        
+        Debug.Log(GameManager.Instance.NumOuts);
+
         if (GameManager.Instance.NumOuts <= outsForPerfect)
             perfectText.SetActive(true);
         if(GameManager.Instance.NumOuts > outsForPerfect && GameManager.Instance.NumOuts <= outsForGood)
@@ -37,7 +37,8 @@ public class GraffitiChecker : MonoBehaviour
         if (GameManager.Instance.NumOuts > outsForGood && GameManager.Instance.NumOuts <= outsForOK)
             okText.SetActive(true);
         if (GameManager.Instance.NumOuts >= outsForBad)
-            okText.SetActive(true);
+            badText.SetActive(true);
+        StartCoroutine(GoToNextScene());
     }
 
     private IEnumerator GoToNextScene()
@@ -45,5 +46,22 @@ public class GraffitiChecker : MonoBehaviour
         yield return new WaitForSeconds(3f);
         fadePanel.SetActive(true);
         SceneManager.LoadScene(sceneToGoTo, LoadSceneMode.Single);
+    }
+
+    public void ShowMuelleGraffiti()
+    {
+        GameManager.Instance.muellePainted = true;
+    }
+    public void ShowTifonGraffiti()
+    {
+        GameManager.Instance.tifonPainted = true;
+    }
+    public void ShowGlubGraffiti()
+    {
+        GameManager.Instance.glubPainted = true;
+    }
+    public void ShowBleckGraffiti()
+    {
+        GameManager.Instance.bleckPainted = true;
     }
 }

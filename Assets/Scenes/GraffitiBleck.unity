@@ -308,6 +308,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 205572749}
+        m_MethodName: ShowBleckGraffiti
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &87984179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +479,7 @@ Canvas:
   m_GameObject: {fileID: 404667184}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1270207869}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -535,8 +546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -119, y: 36.699997}
-  m_SizeDelta: {x: 262.94098, y: 78.529335}
+  m_AnchoredPosition: {x: -174.4, y: 72.5}
+  m_SizeDelta: {x: 373.70587, y: 150.03577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &421563575
 Animator:
@@ -577,12 +588,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9994370e7f02a6641b6bbcb6ce0cc3b4, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 9d8728e3123de1e41ae6948dd0ed4fa4, type: 3}
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 55
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -633,8 +644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -119, y: 36.699997}
-  m_SizeDelta: {x: 262.94098, y: 78.529335}
+  m_AnchoredPosition: {x: -174.4, y: 72.5}
+  m_SizeDelta: {x: 373.70587, y: 150.03577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &505218115
 Animator:
@@ -675,12 +686,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9994370e7f02a6641b6bbcb6ce0cc3b4, type: 3}
-    m_FontSize: 29
+    m_Font: {fileID: 12800000, guid: 9d8728e3123de1e41ae6948dd0ed4fa4, type: 3}
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 55
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -725,6 +736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999269ca530b10d4aa75367ad4cc67d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muellePainted: 0
+  tifonPainted: 0
+  glubPainted: 0
+  bleckPainted: 0
 --- !u!4 &522774921
 Transform:
   m_ObjectHideFlags: 0
@@ -877,8 +892,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -119, y: 36.699997}
-  m_SizeDelta: {x: 262.94098, y: 78.529335}
+  m_AnchoredPosition: {x: -174.4, y: 72.5}
+  m_SizeDelta: {x: 373.70587, y: 150.03577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &780807621
 Animator:
@@ -919,12 +934,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9994370e7f02a6641b6bbcb6ce0cc3b4, type: 3}
-    m_FontSize: 42
+    m_Font: {fileID: 12800000, guid: 9d8728e3123de1e41ae6948dd0ed4fa4, type: 3}
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 55
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -975,8 +990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -119, y: 36.699997}
-  m_SizeDelta: {x: 262.94098, y: 78.529335}
+  m_AnchoredPosition: {x: -174.4, y: 72.5}
+  m_SizeDelta: {x: 373.70587, y: 150.03577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &868437067
 Animator:
@@ -1017,12 +1032,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9994370e7f02a6641b6bbcb6ce0cc3b4, type: 3}
-    m_FontSize: 48
+    m_Font: {fileID: 12800000, guid: 9d8728e3123de1e41ae6948dd0ed4fa4, type: 3}
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 55
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1430,7 +1445,7 @@ MonoBehaviour:
   prefab: {fileID: 3314613748469670407, guid: a77c43a3616a6454a871559d06d49149, type: 3}
   Fondo: {fileID: 0}
   Y: 50
-  velocity: 0.01
+  velocity: 0.005
 --- !u!1001 &1978114166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,18 +1480,23 @@ PrefabInstance:
       objectReference: {fileID: 85401448}
     - target: {fileID: 6164643162228952014, guid: aa78711579012144793b7a41737fbb8f,
         type: 3}
+      propertyPath: outsForOK
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164643162228952014, guid: aa78711579012144793b7a41737fbb8f,
+        type: 3}
       propertyPath: perfectText
       value: 
       objectReference: {fileID: 421563573}
     - target: {fileID: 6164643162228952014, guid: aa78711579012144793b7a41737fbb8f,
         type: 3}
       propertyPath: sceneToGoTo
-      value: SampleScene
+      value: Alley1
       objectReference: {fileID: 0}
     - target: {fileID: 6164643162228952014, guid: aa78711579012144793b7a41737fbb8f,
         type: 3}
       propertyPath: minPointsToGo
-      value: 400
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 6164643162228952014, guid: aa78711579012144793b7a41737fbb8f,
         type: 3}

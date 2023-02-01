@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public string[] GraffitiBinario { get; set; }
     public int NumOuts { get; set; }
     public int NumIns { get; set; }
+    [HideInInspector]
+    public bool muellePainted, tifonPainted, glubPainted, bleckPainted;
 
     public static GameManager Instance
     {

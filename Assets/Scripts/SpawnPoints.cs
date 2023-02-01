@@ -66,7 +66,7 @@ public class SpawnPoints : MonoBehaviour
             GameManager.Instance.NumIns++;
         }
         GameManager.Instance.NumOuts += isInNumber;
-       Debug.Log(GameManager.Instance.NumOuts);
+      // Debug.Log(GameManager.Instance.NumOuts);
 
         int i = 0;
         i++;
